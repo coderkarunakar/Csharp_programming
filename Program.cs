@@ -15,19 +15,19 @@ namespace consoleApp2
 
         static void Main(string[] args)
         {
-           
+            //Receive User input
+            //Write  inserts line after a new text 
+            Console.Write("What is your name?");
+            //storing names letters and text
+            //for reading information from the user use ReadLine
+            string name=Console.ReadLine();
+            //user input on the console 
+            //printing a message
+            Console.WriteLine($"Hello {name}");
+
             
 
-            //there are a diffrent methods of console methods
-            //if we want to change text color inside of our console
-
-            Console.ForegroundColor = ConsoleColor.Red;
-            //changing the color of window
-            Console.BackgroundColor = ConsoleColor.White;
-            //applying background color to entire window
-            Console.Clear();
-            //if u want to print to the screen use console
-            Console.WriteLine("Hello World");
+           
         }
     }
 }
