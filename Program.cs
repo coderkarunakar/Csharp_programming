@@ -11,45 +11,23 @@ namespace consoleApp2
        
         static void Main(string[] args)
         {
-            //Type casting :converting data types using Parse(we can convert)
-            //converting string to bool
-            bool boolFromStr = bool.Parse("true");
+            //Formating output
+            Console.WriteLine("Currency:{0:c}",23.455666);
 
-            //string to int
-            int intFromStr = int.Parse("100");
-            //string to double
-            double dblFromStr = double.Parse("1.234"); 
-
-            //double into a  string (here ToString is used to convert any datatype to string
-            string strVal =dblFromStr.ToString();
+            //here d4 means it will make it as 4 numbers by adding zeroes at the front   
+            Console.WriteLine("Pad with 0s:{0:d4}", 23);
+            //3decimals(it is going to  give u the 3 decimals)
+            Console.WriteLine("3 decimals:{0:f3}", 23.45555);
+            //it is goint to give  you 4 zeroes after this number decimal...
+            Console.WriteLine("Commas:{0:n4}", 2300);
 
 
-            //here {} is used to get the data fetch from the defined
-            Console.WriteLine($"Data type:{strVal.GetType()}");
+            //output for the above code
 
-
-            //Explicity convertion (loosing some data)
-
-            //convert double into integer(here we loose all of the decimal value )
-            double dblNum = 12.345;
-
-            Console.WriteLine($"Integer:{(int)dblNum}");
-
-            //implicit conversion  :here we convert all the data types into the larger data type
-            int intNum = 10;
-            long longNum = intNum;
-            Console.WriteLine(longNum);
-
-
-            //output for the above code:
-                /*Data type:System.String
-                Integer:12(here we loose the data)
-                10*/
-
-
-
-
-
+       /* Currency:? 23.45
+            Pad with 0s: 0023
+            3 decimals: 23.456
+            Commas: 2,300.0000*/
 
         }
     }
