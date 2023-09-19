@@ -11,85 +11,71 @@ namespace consoleApp2
        
         static void Main(string[] args)
         {
-
-            //String
-            //Note:this whole string which is in double quote is reffered as index 0 i.e {0}
-
-            string randString = "This is a String";
-
-            //get no of character in the string
-            Console.WriteLine("String length:{0}", randString.Length);
-
-            //it is going to return true or false
-            Console.WriteLine("String contains is :{0}", randString.Contains("is"));
+            //Topic :Arrays and For loops
 
 
-            //get the idex of a specif character in the given string 
-            Console.WriteLine("Index of is:{0}", randString.IndexOf("is"));
+            //Arrays:
+            //ex:a box is inside a bigger box and then they contains lot of multiple values all of the same data type and each item is acessed using an index,or a key and first index is zero
 
-            //remove the no of character from starting and a specif index
-            Console.WriteLine("String length:{0}", randString.Length);
+            //integer array
+            //creating an array with 3 spaces inside in it
+            int[] favNumbs = new int[3];
+            //adding a number to it
+            favNumbs[0] = 23;
+            Console.WriteLine("favNum 0:{0}", favNumbs[0]);
 
-            //remove string
-            Console.WriteLine("Remove String :{0}", randString.Remove(10,6));
+            //create another array which contains custumer names
+            string[] customers = { "Bob", "Salley", "Sue" };
 
-            //insert string
-            Console.WriteLine("Insert String :{0}", randString.Insert(10,"short"));
+            //creating array using Var key but it must be of same type
+            var employees = new[] { "Mike", "Paul", "Rick" };
 
-            //replace a string
-            Console.WriteLine("Replace String:{0}", randString.Replace("string","sentence"));
+            //creating array using objects
+            object[] randomArray = { "Paul", 45, 1.234,"karunakar" };
+            Console.WriteLine("randomArray 0:{0}",
+                randomArray[0].GetType());
+            Console.WriteLine("Array Size:{0}", randomArray.Length);
 
-            //Compare a string
-            Console.WriteLine("Compare A to B:{0}", String.Compare("A","B",
-                StringComparison.OrdinalIgnoreCase));
-
-
-            //bit confusion here
-            //compare strings and ignore case
-            //<0:str1 preceeds str2(above is this case)
-            //=:Zero
-            //>0:str2 preceeds str1
-
-            Console.WriteLine("----------");  
-            
-            //comparing uppercase A and lower case a
-           Console.WriteLine("A=a:{0}",String.Equals("A","a",
-               StringComparison.OrdinalIgnoreCase));
-
-            //Add padding to a string
-            //this will add a padding with dots at the left side
-            Console.WriteLine("Pad Left:{0}",
-                randString.PadLeft(20,'.'));
-
-            //Adding padding to the right
-            //this will add a padding to the right side with dots
-            Console.WriteLine("Pad Right:{0}",
-                randString.PadRight(20, '.'));
-
-            //Trim (i.e white space
-            //it removes all the leading and trailing white spaces
-            Console.WriteLine("Trim:{0}",
-                randString.Trim());
+            //using a for loop for generating a index value
+            for(int j=0;j<randomArray.Length;j++)
+            {
+                //for generating index value i have used j
+                //here Array {0} is fetching its index and value is fetching value which starts with 1 and that goes on...
+                Console.WriteLine("array:{0}:value:{1}",j, randomArray[j]);
+            }
+            Console.WriteLine("---------");
 
 
-            Console.WriteLine("UpperCase:{0}",
-                randString.ToUpper());
+            //Creating a multidimensional array(2rows by 2columns
 
-            Console.WriteLine("LowerCase:{0}",
-                randString.ToLower());
+            string[,] custNames = new string[2, 2]
+            {          
+                
+                        /*column0*/ /*column1*/
+              /*row0*/  {"Bob","Smaith"},
+               /*row1*/ {"Sally","Smith" }
+                
+            };
+            //get a value inside the multidimensional array using indexes
+            Console.WriteLine("MD Value:{0}", 
+                //here the value is about row(first) and column(second) 
+                //GetValue is used to get the value of specified element in the current Array
+            custNames.GetValue(1,1));
+                
+            for(int j = 0; j < custNames.GetLength(0); j++)
+            {
+                for(int k = 0; k < custNames.GetLength(0); k++)
+                {
+                    Console.WriteLine("{0}", custNames[j,k]);
 
-            //Formating the string
-            //Note:{0} means whole string which is in double quotes
-            string newstring = string.Format("{0} saw a {1} {2} in the {3}",
-                "Paul", "rabbit", "eating", "field");
+                }
+                //for empty space
+                Console.WriteLine();
+            }
+
+           
 
 
-            //adding the new line to the string
-            Console.Write(newstring + "\n");
-
-            //to use a double quote inside the string
-            //  \'\"\\ \t \a
-            Console.WriteLine(@"Exactly what I typed\n");
 
 
 
