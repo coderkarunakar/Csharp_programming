@@ -1,5 +1,6 @@
 ﻿//here we are just importing the System
 using System;
+using System.Collections.Generic;
 
 //working with name space
 namespace consoleApp2
@@ -132,50 +133,58 @@ namespace consoleApp2
 
             }
 
-                /*favNum 0:23
-                randomArray 0:System.String
-                Array Size:4
-                array:0:value:Paul
-                array:1:value:45
-                array:2:value:1.234
-                array:3:value:karunakar
-                ---------
-                MD Value:Smith
-                Bob
-                Smaith
+            /*favNum 0:23
+            randomArray 0:System.String
+            Array Size:4
+            array:0:value:Paul
+            array:1:value:45
+            array:2:value:1.234
+            array:3:value:karunakar
+            ---------
+            MD Value:Smith
+            Bob
+            Smaith
 
-                Sally
-                Smith
+            Sally
+            Smith
 
-                ForEach:1
-                ForEach:4
-                ForEach:9
-                ForEach:2
-                ForEach:8
-                ForEach:100
-                ------------
-                1 at index:5
-                Copy:1
-                Copy:2
-                CopyTo:0
-                CopyTo:0
-                CopyTo:0
-                CopyTo:0
-                CopyTo:0
-                CopyTo:1
-                CopyTo:2
-                CopyTo:3
-                CopyTo:0
-                CopyTo:0
-                */
-
-
+            ForEach:1
+            ForEach:4
+            ForEach:9
+            ForEach:2
+            ForEach:8
+            ForEach:100
+            ------------
+            1 at index:5
+            Copy:1
+            Copy:2
+            CopyTo:0
+            CopyTo:0
+            CopyTo:0
+            CopyTo:0
+            CopyTo:0
+            CopyTo:1
+            CopyTo:2
+            CopyTo:3
+            CopyTo:0
+            CopyTo:0
+            */
 
 
+            //Difference between For loop and For Each loop
+            
+            /*For loop executes the code until the given condition is False
+             where as the ForEach loop executes the code
+            untill all the elements get completed in the code
+            */
 
-               
 
-           
+
+
+
+
+
+
 
 
 
