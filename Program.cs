@@ -15,23 +15,31 @@ namespace consoleApp2
         
         static void Main(string[] args)
         {
-            //While loop:we use while loop to execute the code as long as the condition is true
-            int i = 1;
-            while(i  <= 10)
-            {
+//in this program if  you enter some random values ,in that i will guess some random value and show on the screen
 
-                //Note:continue means Skip it....
-                //if the given no is even simply increment and continue(i.e Skip it) if it is odd print it and if it is 9 break and dont print 9
-                if(i%2==0)
-                {
-                    i++;
-                    continue;
-                }
-                if (i == 9) break;
-                Console.WriteLine(i);
-                i++;
-            }
-                
+
+            //Do while: you must execute the code atleast one time
+
+            
+            //generating a new random value
+                Random rnd = new Random();
+            //here 1,11 are the min value and max value in between this only it will get executed
+
+            //From here only a no is  generated in between 1,11 i.e till 10
+            int secretNumber=rnd.Next(1,11);
+            //number guessed by the user
+            int numberGuessed = 0;
+            Console.WriteLine("Random Num:", secretNumber);
+
+            do
+            {
+                Console.WriteLine("Enter a number between 1 & 10:");
+                //converting the entered number into an integer and Read.Line takes the input from the user untill the enter key is pressed,it reads each line of string or values from input
+                numberGuessed = Convert.ToInt32(Console.ReadLine());
+
+            } while(secretNumber != numberGuessed);
+            Console.WriteLine("You guessed it was {0}",secretNumber);
+
 
 
 
